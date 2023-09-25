@@ -1,0 +1,27 @@
+body{
+    margin: 50px;
+    padding: 50px 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(21, 105, 39);
+}
+#frmvl{
+    padding: 50px;
+    background-color: yellowgreen;
+    text-align: center;
+}
+h2{
+    padding: 0px 0px 10px 0px;
+}
+input{
+    width: 200px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+.error{
+    color: red;
+    text-align: left;
+    padding: 0px;
+}

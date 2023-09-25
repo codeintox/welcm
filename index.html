@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formVal.css">
+</head>
+<body>
+    <div id="frmvl">
+        <h2>LOGIN</h2>
+        <form action="" onsubmit="return validForm()">
+         <input type="text" placeholder="Your Name" id="inp"><br>
+         <p id="userr" class="error"></p>
+        <input type="password" placeholder="password" id="pass"><br>
+        <p id="pserr" class="error"></p>      
+            <input type="submit" id="sbt" >
+        </form>
+    </div>
+    <script>
+        let inpt = document.getElementById('inp');
+        let pswd = document.getElementById('pass');
+        let flag = 1;
+        function validForm(){
+            if(inpt.value == ""){
+                document.getElementById('userr').innerHTML="user empty";
+                flag = 0;
+            }
+            else if(inpt.value.length < 3){
+                document.getElementById('userr').innerHTML='invalid user name';
+                flag = 0;
+            }
+            else
+            {
+                document.getElementById('userr').innerHTML="";
+                flag = 1;
+            }
+
+            if(pswd.value == ""){
+                document.getElementById('pserr').innerHTML="invalid password";
+                flag = 0;
+            }else
+            {
+                document.getElementById('pserr').innerHTML="";
+                flag = 1;
+            }
+            if(flag)
+            {
+                return true;
+            }
+            else{
+                    return false;
+                }
+            
+        }
+    </script>
+</body>
+</html>
